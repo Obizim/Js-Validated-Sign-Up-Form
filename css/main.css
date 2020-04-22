@@ -1,1 +1,25 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.google.com/specimen/Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url("../images/bg-intro-desktop.png") center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Poppins';
+  font-size: 16px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #6055a5;
+}
+/*# sourceMappingURL=main.css.map */

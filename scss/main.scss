@@ -1,0 +1,19 @@
+
+@import './config';
+
+body{
+    background: url('../images/bg-intro-desktop.png') center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+
+.attribution {
+    font-size: 11px;
+     text-align: center; 
+
+    & a{
+        color: $accent; 
+    }
+   }

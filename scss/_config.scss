@@ -1,0 +1,15 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+$primary-red: hsl(0, 100%, 74%);
+$primary-blue: hsl(154, 59%, 51%);
+
+$accent: hsl(248, 32%, 49%);
+
+$neutral-darkblue: hsl(249, 10%, 26%);
+$neutral-grayish_blue: hsl(246, 25%, 77%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

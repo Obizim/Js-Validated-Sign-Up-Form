@@ -7,31 +7,41 @@
   <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
 
+<section class="container">
+  <div class="container-texts">
+    <h1 class="container-texts__h1">
+      Learn to code by watching others
+    </h1>
+    <div class="container-texts__p">
+      See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable. </div>
+  </div>
 
-  Learn to code by watching others
+  <div class="contact">
+    <p class="contact__free">
+      Try it free 7 days then $20/mo. thereafter</p>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+    <form action="" class="contact__form">
+      <input type="text" name="firstname" id="firstname" placeholder="First Name">
 
-  Try it free 7 days then $20/mo. thereafter
+      <input type="text" name="lastname" id="lastname" placeholder="Last Name">
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+      <input type="email" name="email" id="email" placeholder="Email Address">
 
-  Claim your free trial 
+      <input type="password" name="password" id="password" placeholder="Password">
 
-  By clicking the button, you are agreeing to our Terms and Services
+      <button type="submit">Claim your free trial</button>
+
+      <p class="claim">
+        By clicking the button, you are agreeing to our Terms and Services</p>
+    </form>
+
+  </div>
+</section>
   
   <footer>
     <p class="attribution">
