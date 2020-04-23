@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="css/main.css" />
+
   <title>Frontend Mentor | Intro component with sign up form</title>
-  
 </head>
+
 <body>
+  <section class="container">
+       <div class="container-texts">
+      <h1 class="container-texts__h1">
+        Learn to code by <br> watching others
+      </h1>
+      <p class="container-texts__p">
+        See how experienced developers solve problems in real-time. <br> Watching
+        scripted tutorials is great, but understanding how <br> developers think is
+        invaluable.
+      </p>
+    </div>
 
-<section class="container">
-  <div class="container-texts">
-    <h1 class="container-texts__h1">
-      Learn to code by watching others
-    </h1>
-    <div class="container-texts__p">
-      See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-      but understanding how developers think is invaluable. </div>
-  </div>
+    <div class="contact">
+      <p class="contact__free">
+        Try it free 7 days <span>then $20/mo. thereafter </span></p>
+      <form action="" class="contact__form">
+        <input type="text" name="firstname" id="firstname" placeholder="First Name" />
 
-  <div class="contact">
-    <p class="contact__free">
-      Try it free 7 days then $20/mo. thereafter</p>
+        <input type="text" name="lastname" id="lastname" placeholder="Last Name" />
 
-    <form action="" class="contact__form">
-      <input type="text" name="firstname" id="firstname" placeholder="First Name">
+        <input type="email" name="email" id="email" placeholder="Email Address" />
 
-      <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+        <input type="password" name="password" id="password" placeholder="Password" />
 
-      <input type="email" name="email" id="email" placeholder="Email Address">
+        <button class="btn" type="submit">Claim your free trial</button>
 
-      <input type="password" name="password" id="password" placeholder="Password">
-
-      <button type="submit">Claim your free trial</button>
-
-      <p class="claim">
-        By clicking the button, you are agreeing to our Terms and Services</p>
-    </form>
-
-  </div>
-</section>
-  
-  <footer>
+        <p class="claim">
+          By clicking the button, you are agreeing to our <span class="last">Terms and Services</span>
+        </p>
+      </form>
+    </div>
+    <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Obi Zim</a>.
+      Coded by <a href="https://github.com/Obizim">Obi Zim</a>.
     </p>
   </footer>
+  </section>
+
 </body>
+
 </html>

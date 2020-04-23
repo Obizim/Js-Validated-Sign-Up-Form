@@ -1,15 +1,93 @@
-
 @import './config';
 
 body{
-    background: url('../images/bg-intro-desktop.png') center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Poppins';
-    font-size: 16px;
+    background-color: $primary-red;
+    margin: 0;
+    padding: 0;
 }
 
+.container{
+    background: url('../images/bg-intro-desktop.png') center top;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    padding: 150px;
+
+    .container-texts{
+        color: #fff;
+        padding: 10px; 
+
+        &__h1{
+            font-size: 4rem;
+        }
+
+        &__p{
+            margin-top: 1rem;
+            font-size: 15px;
+        }
+    }
+
+    .contact{
+        padding: 1rem;
+
+        &__free{
+                color: #fff;
+                background-color: $accent;
+                padding: 15px;
+                text-align: center;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                box-shadow: rgba(0, 0, 0, 0.5);
+        }
+
+        &__form{
+            background: #fff;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr) ;
+            padding: 20px;
+            border-radius: 5px;
+
+            input{
+                margin: 10px;
+                padding: 10px;
+                height: 2.5rem;
+                border: 1px solid $neutral-grayish_blue;
+                border-radius: 3px;
+            }
+
+            .btn{
+                background-color: $primary-green;
+                color: #fff;
+                cursor: pointer;
+                text-transform: uppercase;
+                @extend input;
+                outline: none;
+            }
+
+            .claim{
+                text-align: center;
+                font-size: 10px;
+                padding: 10px;
+                opacity: 0.7;
+
+                .last{
+                    color: $primary-red;
+                }
+            }
+        }
+
+    }
+}
+
+@import './responsive';
+
+
 .attribution {
+    color: #fff;
     font-size: 11px;
      text-align: center; 
 

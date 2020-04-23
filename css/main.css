@@ -1,20 +1,169 @@
-@import url("https://fonts.google.com/specimen/Poppins");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
+  background-color: #ff7a7a;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
   background: url("../images/bg-intro-desktop.png") center top;
-  background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Poppins';
-  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 150px;
+}
+
+.container .container-texts {
+  color: #fff;
+  padding: 10px;
+}
+
+.container .container-texts__h1 {
+  font-size: 4rem;
+}
+
+.container .container-texts__p {
+  margin-top: 1rem;
+  font-size: 15px;
+}
+
+.container .contact {
+  padding: 1rem;
+}
+
+.container .contact__free {
+  color: #fff;
+  background-color: #6055a5;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5);
+          box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.container .contact__form {
+  background: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.container .contact__form input, .container .contact__form .btn {
+  margin: 10px;
+  padding: 10px;
+  height: 2.5rem;
+  border: 1px solid #b9b6d3;
+  border-radius: 3px;
+}
+
+.container .contact__form .btn {
+  background-color: #38cc8c;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.container .contact__form .claim {
+  text-align: center;
+  font-size: 10px;
+  padding: 10px;
+  opacity: 0.7;
+}
+
+.container .contact__form .claim .last {
+  color: #ff7a7a;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background: url("../images/bg-intro-mobile.png") center top;
+    background-size: cover;
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px;
+  }
+  .container .container-texts {
+    color: #fff;
+  }
+  .container .container-texts__h1 {
+    text-align: center;
+    font-size: 1rem;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .container .container-texts__p {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    background: url("../images/bg-intro-mobile.png") center top;
+    background-size: cover;
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px;
+  }
+  .container .container-texts {
+    color: #fff;
+  }
+  .container .container-texts__h1 {
+    text-align: center;
+    font-size: 3rem;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .container .container-texts__p {
+    text-align: center;
+    font-size: 15px;
+  }
 }
 
 .attribution {
+  color: #fff;
   font-size: 11px;
   text-align: center;
 }
