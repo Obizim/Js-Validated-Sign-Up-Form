@@ -13,44 +13,62 @@
 
 <body>
   <section class="container">
-       <div class="container-texts">
+    <div class="container-texts">
       <h1 class="container-texts__h1">
-        Learn to code by <br> watching others
+        Learn to code by <br />
+        watching others
       </h1>
       <p class="container-texts__p">
-        See how experienced developers solve problems in real-time. <br> Watching
-        scripted tutorials is great, but understanding how <br> developers think is
-        invaluable.
+        See how experienced developers solve problems in real-time. <br />
+        Watching scripted tutorials is great, but understanding how <br />
+        developers think is invaluable.
       </p>
     </div>
 
     <div class="contact">
       <p class="contact__free">
-        Try it free 7 days <span>then $20/mo. thereafter </span></p>
-      <form action="" class="contact__form">
-        <input type="text" name="firstname" id="firstname" placeholder="First Name" />
-
-        <input type="text" name="lastname" id="lastname" placeholder="Last Name" />
-
-        <input type="email" name="email" id="email" placeholder="Email Address" />
-
-        <input type="password" name="password" id="password" placeholder="Password" />
-
-        <button class="btn" type="submit">Claim your free trial</button>
+        <strong>Try it free 7 days</strong> then $20/mo. thereafter
+      </p>
+      <form id="myForm" class="contact__form">
+        <div class="contact__details">
+          <input type="text" name="firstname" id="firstname" placeholder="First Name" />
+          <img id="img1" src="./images/icon-error.svg" alt="error-icon" />
+          <span id="error_one">First Name cannot be empty</span>
+        </div>
+        <div class="contact__details">
+          <input type="text" name="lastname" id="lastname" placeholder="Last Name" />
+          <img id="img2" src="./images/icon-error.svg" alt="error-icon" />
+          <span id="error_two">Last Name cannot be empty</span>
+        </div>
+        <div class="contact__details">
+          <input type="email" name="email" id="email" placeholder="Email Address" />
+          <img id="img3" src="./images/icon-error.svg" alt="error-icon" />
+          <span id="error_three">Enter correct Email Address</span>
+        </div>
+        <div class="contact__details">
+          <input type="password" name="password" id="password" placeholder="Password" />
+          <img id="img4" src="./images/icon-error.svg" alt="error-icon" />
+          <span id="error_four">Password cannot be empty</span>
+        </div>
+        <button id="btn" class="btn" type="submit">
+          Claim your free trial
+        </button>
 
         <p class="claim">
-          By clicking the button, you are agreeing to our <span class="last">Terms and Services</span>
+          By clicking the button, you are agreeing to our
+          <span class="last">Terms and Services</span>
         </p>
       </form>
     </div>
     <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Obizim">Obi Zim</a>.
-    </p>
-  </footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="https://github.com/Obizim" target="_blank">Obi Zim</a>.
+      </p>
+    </footer>
   </section>
-
+  <script src="js/main.js"></script>
 </body>
 
 </html>

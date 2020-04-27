@@ -61,28 +61,49 @@ body {
 
 .container .contact__form {
   background: #fff;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
   padding: 20px;
   border-radius: 5px;
 }
 
-.container .contact__form input, .container .contact__form .btn {
-  margin: 10px;
-  padding: 10px;
+.container .contact__form input {
+  padding: 15px 15px;
+  outline: none;
   height: 2.5rem;
-  border: 1px solid #b9b6d3;
+  width: 100%;
   border-radius: 3px;
+  border: 1px solid #b9b6d3;
+}
+
+.container .contact__form input:focus {
+  border: 1.3px solid #6055a5;
+  outline: none;
 }
 
 .container .contact__form .btn {
   background-color: #38cc8c;
   color: #fff;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 3px;
   cursor: pointer;
   text-transform: uppercase;
   outline: none;
+  border: 1px solid #38cc8c;
+  -webkit-box-shadow: 1 2px #38cc8c;
+          box-shadow: 1 2px #38cc8c;
+  letter-spacing: 1px;
+}
+
+.container .contact__form .btn:focus {
+  outline: none;
+}
+
+.container .contact__form .btn:active {
+  -webkit-box-shadow: 0 0 #38cc8c;
+          box-shadow: 0 0 #38cc8c;
+  outline: none;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .container .contact__form .claim {
@@ -94,6 +115,29 @@ body {
 
 .container .contact__form .claim .last {
   color: #ff7a7a;
+}
+
+.contact__details {
+  margin: 20px 0 20px 0;
+}
+
+.contact__details img {
+  position: absolute;
+  margin-top: 20px;
+  right: 13.5rem;
+  height: 20px;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.contact__details span {
+  float: right;
+  color: #ff7a7a;
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  opacity: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -151,10 +195,7 @@ body {
   }
   .container .container-texts__h1 {
     text-align: center;
-    font-size: 3rem;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    font-size: 2.5rem;
   }
   .container .container-texts__p {
     text-align: center;
