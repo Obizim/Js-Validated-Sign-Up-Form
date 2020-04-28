@@ -124,7 +124,7 @@ body {
 .contact__details img {
   position: absolute;
   margin-top: 20px;
-  right: 13.5rem;
+  right: 14rem;
   height: 20px;
   opacity: 0;
   -webkit-transform: translateY(-50%);
@@ -200,6 +200,10 @@ body {
   .container .container-texts__p {
     text-align: center;
     font-size: 15px;
+  }
+  .contact__details img {
+    position: absolute;
+    right: 5rem;
   }
 }
 
