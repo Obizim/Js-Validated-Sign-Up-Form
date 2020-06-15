@@ -1,10 +1,4 @@
 
-@mixin  media-sm {
-    @media screen and (max-width: 768px){
-        @content;
-    }
-}
-
 
 @mixin  media-lg {
     @media screen and (max-width: 1024px){
@@ -12,46 +6,20 @@
     }
 }
 
-@include media-sm{
-    .container{
-        background: url('../images/bg-intro-mobile.png') center top;
-        background-size: cover;
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-
-        .container-texts{
-            color: #fff;
-            
-            &__h1{
-                text-align: center;
-                font-size: 1rem;
-                align-items: flex-end;
-            }
-            &__p{
-                text-align: center;
-                font-size: 15px;
-            }
-    }
-}
-}
-
 @include media-lg{
+
+        body{
+        background-image: url('../images/bg-intro-mobile.png');
+    }
     .container{
-        background: url('../images/bg-intro-mobile.png') center top;
-        background-size: cover;
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
+        flex-direction: column;
+
+        .contact{
+            padding: 10px 10px;
+        }
 
         .container-texts{
-            color: #fff;
+            padding: 20px 5px;
             
             &__h1{
                 text-align: center;
@@ -60,15 +28,18 @@
             &__p{
                 text-align: center;
                 font-size: 15px;
+                max-width: 600px;
             }
     }
 }
 
 .contact__details{
+    margin: 0px 0;
 
     img{
-        position: absolute;
-        right: 5rem;
+        position: relative;
+        left: 13rem;
+        transform: translateY(-180%);
     }
 }
 }

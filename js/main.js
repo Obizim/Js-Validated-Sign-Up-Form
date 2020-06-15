@@ -1,56 +1,50 @@
 const form = document.getElementById('myForm');
 
-form.addEventListener('submit', (e)=>{
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const firstname = document.getElementById("firstname").value;
-  const lastname = document.getElementById('lastname').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+  const firstName = form['firstname'].value;
+  const lastName = form['lastname'].value;
+  const email = form['email'].value;
+  const password = form['password'].value;
 
-    if(firstname === ""){
-      document.getElementById('error_one').style.opacity = "1";
-      document.getElementById('img1').style.opacity = "1";
-      document.getElementById("firstname").style.borderColor = "hsl(0, 100%, 74%)";
-    }
-    else{
-      document.getElementById('error_one').style.opacity = "0";
-      document.getElementById('img1').style.opacity = "0";
-      document.getElementById("firstname").style.borderColor = "hsl(246, 25%, 77%)";
-    }
+  if(firstName == ""){
+    addError('firstname', 'FirstName cannot be empty');
+  }else{
+    removeError('firstname', " ");
+  }
+  
+  if(lastName == ""){
+    addError('lastname', 'LastName cannot be empty');
+  }else{
+    removeError('lastname', "");
+  }
 
-    if(lastname === ""){
-      document.getElementById('error_two').style.opacity = "1";
-      document.getElementById('img2').style.opacity = "1";
-      document.getElementById("lastname").style.borderColor = "hsl(0, 100%, 74%)";
-    }
-    else{
-      document.getElementById('error_two').style.opacity = "0";
-      document.getElementById('img2').style.opacity = "0";
-      document.getElementById("lastname").style.borderColor = "hsl(246, 25%, 77%)";
-    }
-    
-    if(email === ""){
-      document.getElementById('error_three').style.opacity = "1";
-      document.getElementById('img3').style.opacity = "1";
-      document.getElementById("email").style.borderColor = "hsl(0, 100%, 74%)";
-    }
-    else{
-      document.getElementById('error_three').style.opacity = "0";
-      document.getElementById('img3').style.opacity = "0";
-      document.getElementById("email").style.borderColor = "hsl(246, 25%, 77%)";
-    }
-
-    if(password === ""){
-      document.getElementById('error_four').style.opacity = "1";
-      document.getElementById('img4').style.opacity = "1";
-      document.getElementById("password").style.borderColor = "hsl(0, 100%, 74%)";
-    }
-    else{
-      document.getElementById('error_four').style.opacity = "0";
-      document.getElementById('img4').style.opacity = "0";
-      document.getElementById("password").style.borderColor = "hsl(246, 25%, 77%)";
-    }
-    
+  if(email == ""){
+    addError('email', 'Looks like this is not an email');
+  }else{
+    removeError('email', "");
+  }
+  if(password == ""){
+    addError('password', 'Password cannot be empty');
+  }else{
+    removeError('password', "");
+  }
 
 });
+
+function addError(field, message) {
+  const details = form[field].parentNode;
+  details.classList.add('error');
+
+  const small = details.querySelector('small');
+  small.innerText = message;
+}
+
+function removeError(field, message) {
+  const details = form[field].parentNode;
+  details.classList.remove('error');
+
+  const small = details.querySelector('small');
+  small.innerText = message;
+}

@@ -9,51 +9,59 @@
 
 body {
   background-color: #ff7a7a;
+  background-image: url("../images/bg-intro-desktop.png");
   margin: 0;
   padding: 0;
 }
 
 .container {
-  background: url("../images/bg-intro-desktop.png") center top;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
 .container .container-texts {
   color: #fff;
-  padding: 10px;
+  padding: 0 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .container .container-texts__h1 {
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .container .container-texts__p {
   margin-top: 1rem;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 100;
+  line-height: 1.5;
 }
 
 .container .contact {
-  padding: 1rem;
+  padding: 0px 80px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .container .contact__free {
   color: #fff;
   background-color: #6055a5;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -63,12 +71,14 @@ body {
 
 .container .contact__form {
   background: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 5px;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .container .contact__form input {
-  padding: 15px 15px;
+  padding: 25px 15px;
   outline: none;
   height: 2.5rem;
   width: 100%;
@@ -84,15 +94,15 @@ body {
 .container .contact__form .btn {
   background-color: #38cc8c;
   color: #fff;
-  height: 2.5rem;
+  padding: 15px 15px;
   width: 100%;
   border-radius: 3px;
   cursor: pointer;
   text-transform: uppercase;
   outline: none;
-  border: 1px solid #38cc8c;
-  -webkit-box-shadow: 1 2px #38cc8c;
-          box-shadow: 1 2px #38cc8c;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 1px 2px rgba(138, 134, 134, 0.5);
+          box-shadow: 1px 2px rgba(138, 134, 134, 0.5);
   letter-spacing: 1px;
 }
 
@@ -120,80 +130,50 @@ body {
 }
 
 .contact__details {
-  margin: 20px 0 20px 0;
+  margin: 20px 0;
 }
 
 .contact__details img {
   position: absolute;
-  margin-top: 20px;
-  right: 14rem;
+  right: 20%;
   height: 20px;
   opacity: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(95%);
+          transform: translateY(95%);
 }
 
-.contact__details span {
+.contact__details small {
   float: right;
   color: #ff7a7a;
-  font-size: 10px;
+  font-size: 13px;
+  font-style: italic;
   margin-top: 5px;
   margin-bottom: 10px;
-  opacity: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    background: url("../images/bg-intro-mobile.png") center top;
-    background-size: cover;
-    width: 100vw;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 30px;
-  }
-  .container .container-texts {
-    color: #fff;
-  }
-  .container .container-texts__h1 {
-    text-align: center;
-    font-size: 1rem;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .container .container-texts__p {
-    text-align: center;
-    font-size: 15px;
-  }
+.contact__details.error input {
+  border: 2px solid #ff7a7a;
+}
+
+.contact__details.error img {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1024px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+  }
   .container {
-    background: url("../images/bg-intro-mobile.png") center top;
-    background-size: cover;
-    width: 100vw;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .contact {
+    padding: 10px 10px;
   }
   .container .container-texts {
-    color: #fff;
+    padding: 20px 5px;
   }
   .container .container-texts__h1 {
     text-align: center;
@@ -202,20 +182,16 @@ body {
   .container .container-texts__p {
     text-align: center;
     font-size: 15px;
+    max-width: 600px;
+  }
+  .contact__details {
+    margin: 0px 0;
   }
   .contact__details img {
-    position: absolute;
-    right: 5rem;
+    position: relative;
+    left: 13rem;
+    -webkit-transform: translateY(-180%);
+            transform: translateY(-180%);
   }
-}
-
-.attribution {
-  color: #fff;
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #6055a5;
 }
 /*# sourceMappingURL=main.css.map */
