@@ -40,14 +40,13 @@ body {
 }
 
 .container .container-texts__h1 {
-  font-size: 4rem;
+  font-size: 40px;
   font-weight: 400;
 }
 
 .container .container-texts__p {
   margin-top: 1rem;
   font-size: 15px;
-  font-weight: 100;
   line-height: 1.5;
 }
 
